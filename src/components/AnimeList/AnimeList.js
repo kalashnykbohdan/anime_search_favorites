@@ -89,9 +89,9 @@ export default function AnimeList() {
                 {isLoadingSearch ? <div className="spinner"></div> : 
                 <>
                     {error && <h1>Erorr {error}</h1>}
-                    {list.length !== 0 && !error && <ul className={style.anime__list}>
+                    {list.length !== 0 && !error && <ul className={'list '+ style.anime__list}>
                         {list.map(item => (
-                                <li key={item.id} className={style.anime__item}>
+                                <li key={item.id} className={'item '+ style.anime__item}>
                                     <img src={require("./../../img/animefavorite.png")} className={style.anime__img} alt="img_item"/>
                                     <div className={style.anime__content}>
                                         <p className={style.anime__name + ' ' + style.anime__name_romaji}>{item.title.romaji}</p>
