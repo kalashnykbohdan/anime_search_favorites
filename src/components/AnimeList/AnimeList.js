@@ -51,7 +51,6 @@ export default function AnimeList() {
                 .then(data => {
                     setList(data.media);
                     setCurrentPage(currentPage + 1)
-                    console.log(data.media);
                     }
                 )
                 .catch(error => setError(error.message))
