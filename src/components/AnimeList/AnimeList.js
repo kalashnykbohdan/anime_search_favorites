@@ -93,15 +93,14 @@ export default function AnimeList() {
                         {list.map(item => (
                                 <li key={item.id} className={style.anime__item}>
                                     <img src={require("./../../img/animefavorite.png")} className={style.anime__img} alt="img_item"/>
-                                    <div className={style.anime__name}>
-                                        <p className={style.anime__name_romaji}>{item.title.romaji}</p>
-                                        <p className={style.anime__name_native}>{item.title.native}</p>
+                                    <div className={style.anime__content}>
+                                        <p className={style.anime__name + ' ' + style.anime__name_romaji}>{item.title.romaji}</p>
+                                        <p className={style.anime__name + ' ' + style.anime__name_native}>{item.title.native}</p>
+                                        <button type='button' className={style.anime__favorit_btn} onClick={() => handleAddFavorit(item)}>
+                                            {favoritList.length !== 0 && filterItemFavorit(item.id)
+                                            ? <HeartFilled className={style.heart}/> : <HeartOutlined className={style.heart}/>} 
+                                        </button>
                                     </div>
-
-                                    <button type='button' className={style.anime__favorit_btn} onClick={() => handleAddFavorit(item)}>
-                                        {favoritList.length !== 0 && filterItemFavorit(item.id)
-                                        ? <HeartFilled className={style.heart}/> : <HeartOutlined className={style.heart}/>} 
-                                    </button>
                                 </li>
                             ))}  
                     </ul>}
