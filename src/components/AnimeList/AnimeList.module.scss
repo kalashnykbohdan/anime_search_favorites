@@ -1,0 +1,137 @@
+
+.search{
+    width: 100%;
+    height: 0 auto;
+    margin: 0 auto;
+
+    padding: 25px 0;
+}
+.search > form{ 
+    position: relative;
+    // background-color: #00CC99;
+}
+.search > form  > input {
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    // padding-right: 60px;
+
+    padding: 0 10px;
+    padding-right: 50px;
+    font-weight: 400;
+    size: 16px;
+    line-height: 30px;
+    color: #D9D9D9;
+
+}
+.search__btn_clear{
+    position: absolute;
+    right: 20px;
+    bottom: 22px;
+    transform: scale(2);
+}
+.search > input::placeholder{
+    color: #D9D9D9;
+}
+
+.anime__item {
+    margin-bottom: 40px;
+    background-color: white;
+    position: relative;
+}
+
+.anime__img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+
+    // height: auto;
+    
+    
+}
+.anime__name{
+    padding: 20px 12px;
+    text-align: center;
+
+    size: 16px;
+    line-height: 28px;
+
+    margin-bottom: 60px;
+}
+.anime__name_romaji{
+    font-size: 700;
+}
+.anime__name_native{
+    font-size: 400;
+}
+.heart_void{
+    transform: scale(1.5);   
+}
+.heart_complete{
+    transform: scale(1.5);
+}
+.anime__favorit_btn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    // float: right;
+    background-color: white;
+    padding: 20px;
+}
+.anime__pagination{
+    margin: 0 auto;
+    font-size: 700;
+    size: 16px;
+    line-height: 28px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 0 30px;
+    text-transform:uppercase;
+    width: 160px;
+    height: 50px;
+    background-color: #00CC99;
+    border-radius: 5px;
+}
+@media screen and (min-width: 768px) {
+    .search{
+        max-width: 700px;
+    }
+    .anime__list{
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .anime__item{
+        width: 340px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    .anime__item:nth-child(2n){
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .anime__item{
+        width: 310px;
+        margin-right: 15px;
+    }
+    .anime__item:nth-child(2n){
+        margin-right: 15px;
+    }
+    .anime__item:nth-child(3n){
+        margin-right: 0;
+    }
+}
+@media screen and (min-width: 1440px) {
+
+    .anime__item{
+        width: 390px;
+    }
+}

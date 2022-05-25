@@ -1,0 +1,81 @@
+.favorite__list {
+    width:  100%;
+    height: auto;
+
+    padding: 0 10px;
+}
+.favorite__item{
+    width: 100%;
+    height: 220px;
+
+    display: flex;
+    margin-bottom: 20px;
+    background-color: white;
+}
+.favorite__img{
+    width: auto;
+    height: 100%;
+}
+.favorite__content{
+    width: 100%;
+    position: relative;
+}
+.favorite__name_romaji{
+    margin-top: 25px;
+    padding: 0 20px;
+    font-weight: 700;
+}
+.favorite__name_native{
+    margin-top: 25px;
+    padding: 0 20px;
+    font-weight: 400;
+}
+
+.favorite__btn_close{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+
+    transform: scale(2);
+}
+
+@media screen and (min-width: 768px) {
+    .favorite__list{
+        display: flex;
+        flex-wrap: wrap;
+
+        padding: 0;
+    }
+    .favorite__item{
+        width: 340px;
+        height: 220px;
+        margin-right: 15px;
+    }
+    .favorite__item:nth-child(2n){
+        margin-right: 0;
+    }
+
+    .favorite__content{
+        width: 245px;
+    }
+
+  }
+  @media screen and (min-width: 1024px) {
+    .favorite__item{
+        width: 310px;
+        margin-right: 15px;
+    }
+    .favorite__item:nth-child(2n){
+        margin-right: 15px;
+    }
+    .favorite__item:nth-child(3n){
+        margin-right: 0;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .favorite__item{
+        width: 390px;
+    }  
+  }
+
