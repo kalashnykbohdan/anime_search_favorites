@@ -30,7 +30,7 @@
     bottom: 22px;
     transform: scale(2);
 }
-.search > input::placeholder{
+.search > form > input::placeholder{
     color: #D9D9D9;
 }
 
@@ -52,9 +52,6 @@
 .anime__name{
     padding: 20px 12px;
     text-align: center;
-
-    size: 16px;
-    line-height: 28px;
 
     margin-bottom: 60px;
 }
