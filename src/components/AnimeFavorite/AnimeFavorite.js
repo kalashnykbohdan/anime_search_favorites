@@ -11,18 +11,17 @@ export default function AnimeFavorite() {
     
     return (
         <>
-            {favoritList.length !== 0 &&<section>
+            {favoritList.length !== 0 &&<section className={style.favorite}>
                 <h1>Любимое аниме</h1>
                 <div className='container'>
-                    
                         <ul className={style.favorite__list}>
                             {favoritList.map(item => (
                                 <li  className={style.favorite__item} key={item.id}>
                                     <img src={require("./../../img/animefavorite.png")} className={style.favorite__img} alt="img_item"/>
                                     <div className={style.favorite__content}>
-                                        <p className={style.favorite__name_romaji}>{item.title.romaji}</p>
-                                        <p className={style.favorite__name_native}>{item.title.native}</p>
-                                        <button type='button' onClick={() => remuveItemFavorit(item.id)} className={style.favorite__btn}><CloseOutlined className={style.favorite__btn_close}/></button>
+                                        <p className={style.favorite__name + ' ' + style.favorite__name_romaji}>{item.title.romaji}</p>
+                                        <p className={style.favorite__name + ' ' + style.favorite__name_native}>{item.title.native}</p>
+                                        <button type='button' onClick={() => remuveItemFavorit(item.id)} ><CloseOutlined className={style.favorite__btn_close}/></button>
                                     </div>
                                 </li>
                             ))}

@@ -101,7 +101,7 @@ export default function AnimeList() {
 
                                     <button type='button' className={style.anime__favorit_btn} onClick={() => handleAddFavorit(item)}>
                                         {favoritList.length !== 0 && filterItemFavorit(item.id)
-                                        ? <HeartFilled className={style.heart_complete}/> : <HeartOutlined className={style.heart_void}/>} 
+                                        ? <HeartFilled className={style.heart}/> : <HeartOutlined className={style.heart}/>} 
                                     </button>
                                 </li>
                             ))}  
