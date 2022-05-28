@@ -92,7 +92,9 @@ export default function AnimeList() {
                     {list.length !== 0 && !error && <ul className={'list '+ style.anime__list}>
                         {list.map(item => (
                                 <li key={item.id} className={'item '+ style.anime__item}>
-                                    <img src={require("./../../img/animefavorite.png")} className={style.anime__img} alt="img_item"/>
+                                    <object data={item.coverImage.extraLarge} className={style.anime__img} alt="img_item">
+                                        <img src={require('./../../img/animefavorite.png')} className={style.anime__img} alt="img_default"/>
+                                    </object>
                                     <div className={style.anime__content}>
                                         <p className={style.anime__name + ' ' + style.anime__name_romaji}>{item.title.romaji}</p>
                                         <p className={style.anime__name + ' ' + style.anime__name_native}>{item.title.native}</p>

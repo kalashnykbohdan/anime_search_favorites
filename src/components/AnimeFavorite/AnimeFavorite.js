@@ -17,7 +17,9 @@ export default function AnimeFavorite() {
                         <ul className={'list '+ style.favorite__list}>
                             {favoritList.map(item => (
                                 <li  className={'item '+ style.favorite__item} key={item.id}>
-                                    <img src={require("./../../img/animefavorite.png")} className={style.favorite__img} alt="img_item"/>
+                                    <object data={item.coverImage.extraLarge} className={style.favorite__img} alt="img_item">
+                                        <img src={require('./../../img/animefavorite.png')} className={style.favorite__img} alt="img_default"/>
+                                    </object>
                                     <div className={style.favorite__content}>
                                         <p className={style.favorite__name + ' ' + style.favorite__name_romaji}>{item.title.romaji}</p>
                                         <p className={style.favorite__name + ' ' + style.favorite__name_native}>{item.title.native}</p>

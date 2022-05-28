@@ -15,6 +15,12 @@ query ($id: Int, $page: Int, $perPage: Int, $search: String) {
         english
         native
       }
+      coverImage{
+          extraLarge
+          large
+          medium
+          color
+      }
     }
   }
 }
